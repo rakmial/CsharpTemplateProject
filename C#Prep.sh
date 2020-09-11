@@ -9,3 +9,13 @@ mv ./$1.Solution/$1.Tests/ModelTests/TemplateClassTest.cs ./$1.Solution/$1.Tests
 
 sed -i s/TemplateClass/$1/g ./$1.Solution/$1{/Models/$1.cs,.Tests/{$1.Tests.csproj,ModelTests/$1Test.cs}}
 sed -i s/TemplateProject/$1/g ./$1.Solution/$1{/Models/$1.cs,.Tests/{$1.Tests.csproj,ModelTests/$1Test.cs}}
+sed -i s/TEMPLATE/$1/g ./$1.Solution/.travis.yml
+
+rm -rf ./$1.Solution/.git
+rm -rf ./$1.Solution/$1/obj
+rm -rf ./$1.Solution/$1.Tests/obj
+rm -rf ./$1.Solution/$1/bin
+rm -rf ./$1.Solution/$1.Tests/bin
+
+
+
